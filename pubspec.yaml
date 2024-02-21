@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dotted_border: ^2.0.0
+  l10n_flutter: ^1.0.7
+  connectivity_plus: ^4.0.2
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +20,31 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/login/abbott_logo.png
+    - assets/images/login/walk.png
+    - assets/images/login/HPR.png
+    - assets/images/location/building_icon.png
+    - assets/images/location/download.webp
+    - assets/images/location/place_marker.png
+    - assets/images/location/place_marker_blue.png
+    - assets/images/common/syncing.png
+    - assets/images/location/download2.jpeg
+    - assets/images/login/GembaWalk.png
+    - assets/images/observation_complete/doc.png
+    - assets/images/observation_complete/pdf.png
+    - assets/images/observation_complete/xls.png
+    - assets/images/observation_complete/email.png
+    - assets/images/observation/noAttach.png
+    - assets/images/observation/fast_forward.png
+    - assets/images/sync_item/sync.gif
+    - assets/images/observation_complete/copy.png
+
+fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+    - family: Playfair Display
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-SemiBold.ttf
