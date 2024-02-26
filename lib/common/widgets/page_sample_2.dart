@@ -145,15 +145,82 @@ class _PageSample2State extends State<PageSample2> {
               ],
             ),
           ),
-          // Expanded(
-          //     flex: 8,
-          //     child: SyncItemList(
-          //       getCount: (value) {
-          //         setState(() {
-          //           recordCount = value;
-          //         });
-          //       },
-          //     )),
+          Expanded(
+            flex: 8,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: ClipRRect(
+                clipBehavior: Clip.antiAlias,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50),
+                    topRight: Radius.circular(50),
+                    bottomLeft: Radius.circular(50),
+                    bottomRight: Radius.circular(50)),
+                child: Container(
+                  color: Colors.white,
+
+                  // PagedListView<int, ObservationDto>(
+                  //   padding: EdgeInsets.symmetric(vertical: 20),
+                  //   pagingController: _pagingController,
+                  //   builderDelegate: PagedChildBuilderDelegate<ObservationDto>(
+                  //     itemBuilder: (context, item, index) {
+                  //       priority = item.priority?.id;
+                  //       description = item.descriptionOfObservation.toString();
+                  //       return Container(
+                  //         color: Colors.transparent,
+                  //         child: Padding(
+                  //           padding: const EdgeInsets.only(bottom: 16),
+                  //           child: Card(
+                  //             borderOnForeground: true,
+                  //             color: priority == EnumPriority.High.id
+                  //                 ? Colors.orange[50]
+                  //                 : priority == EnumPriority.Medium.id
+                  //                     ? Colors.blue[50]
+                  //                     : priority == EnumPriority.Low.id
+                  //                         ? Colors.grey[100]
+                  //                         : Colors.white,
+                  //             margin: EdgeInsets.only(left: 8, right: 8),
+                  //             shape: RoundedRectangleBorder(
+                  //               borderRadius: BorderRadius.circular(10),
+
+                  //               // You can adjust the radius as needed
+                  //             ),
+                  //             elevation: 0,
+                  //             child: ClipPath(
+                  //               clipper: ShapeBorderClipper(
+                  //                   shape: RoundedRectangleBorder(
+                  //                       borderRadius: BorderRadius.circular(10))),
+                  //               child: Container(
+                  //                 // padding: EdgeInsets.all(16),
+                  //                 decoration: BoxDecoration(
+                  //                   border: Border(
+                  //                     left: BorderSide(
+                  //                       width: 8,
+                  //                       color: priority == EnumPriority.High.id
+                  //                           ? Colors.orange[300]!
+                  //                           : priority == EnumPriority.Medium.id
+                  //                               ? Colors.blue[500]!
+                  //                               : priority == EnumPriority.Low.id
+                  //                                   ? Colors.grey[500]!
+                  //                                   : Colors.white,
+                  //                     ),
+                  //                   ),
+                  //                 ),
+                  //                 transform: Matrix4.translationValues(0, 0, 0),
+                  //                 child: _cardData(item, index, item.id!),
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       );
+                  //     },
+
+                  //   ),
+                  // ),
+                ),
+              ),
+            ),
+          ),
           Expanded(
             flex: 1,
             child: Row(

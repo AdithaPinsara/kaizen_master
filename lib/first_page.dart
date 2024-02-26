@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'common/widgets/date_picker.dart';
 import 'common/widgets/dropdown_field.dart';
 import 'common/widgets/evidence_selector.dart';
 import 'common/widgets/language_selector.dart';
 import 'common/widgets/page_sample_1.dart';
 import 'common/widgets/page_sample_2.dart';
+import 'common/widgets/radio_buttons.dart';
 import 'common/widgets/text_form_field.dart';
 
 class FirstPage extends StatelessWidget {
@@ -27,6 +29,8 @@ class FirstPage extends StatelessWidget {
             ),
             EvidenceSelector(),
             LanguageSelector(),
+            RadioButtons(),
+            CommonDatePicker(),
             TextButton(
                 onPressed: () {
                   // Navigate to the second page
