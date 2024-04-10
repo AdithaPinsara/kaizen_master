@@ -12,6 +12,9 @@ dependencies:
   dotted_border: ^2.0.0
   l10n_flutter: ^1.0.7
   connectivity_plus: ^4.0.2
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
 
 dev_dependencies:
   flutter_test:

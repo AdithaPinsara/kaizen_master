@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RadioButtons extends StatefulWidget {
-  const RadioButtons({super.key});
+  final String? name;
+  const RadioButtons({Key? key, this.name}) : super(key: key);
 
   @override
   State<RadioButtons> createState() => _RadioButtonsState();
@@ -16,7 +17,7 @@ class _RadioButtonsState extends State<RadioButtons> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Radio",
+            widget.name ?? "",
             //AppLocalizations.of(context)!.repeatedObservation,
             style: TextStyle(
               fontSize: 16,
@@ -54,14 +55,14 @@ class _RadioButtonsState extends State<RadioButtons> {
               ),
             ],
           ),
-          Text(
-            //AppLocalizations.of(context)!.repeatedObservationText,
-            "Note: Choose 'Yes' if the observation is a repeated more than once",
-            style: TextStyle(
-              fontSize: 11,
-              color: Colors.blue,
-            ),
-          ),
+          // Text(
+          //   //AppLocalizations.of(context)!.repeatedObservationText,
+          //   "Note: Choose 'Yes' if the observation is a repeated more than once",
+          //   style: TextStyle(
+          //     fontSize: 11,
+          //     color: Colors.blue,
+          //   ),
+          // ),
         ],
       ),
     );

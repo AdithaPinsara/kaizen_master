@@ -23,7 +23,7 @@ class _CommonDatePickerState extends State<CommonDatePicker> {
                 child: Wrap(
                   children: [
                     Text(
-                      "Common Date Picker",
+                      "Due Date",
                       //AppLocalizations.of(context)!.dueDate,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),

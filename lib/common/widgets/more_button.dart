@@ -1,7 +1,11 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
+import '../../screens/auth/auth_screen.dart';
+import '../../services/auth/auth.dart';
+
 class MoreButton extends StatelessWidget {
+  final AuthService _auth = AuthService();
   MoreButton({super.key});
   //final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
@@ -29,6 +33,7 @@ class MoreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<String>(
+      iconColor: Colors.white,
       color: Colors.white,
       offset: Offset(0, 40),
       icon: Icon(Icons.more_vert),
@@ -76,7 +81,9 @@ class MoreButton extends StatelessWidget {
                     side:
                         const BorderSide(color: Colors.orangeAccent, width: 1),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                   child: Text(
                     style: TextStyle(
                       color: Colors.orangeAccent,
@@ -112,7 +119,14 @@ class MoreButton extends StatelessWidget {
                     backgroundColor:
                         MaterialStateProperty.all<Color>(Colors.orangeAccent),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    _auth.signOut();
+                    Navigator.of(context).pop();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AuthScreen()),
+                    );
+                  },
                   child: Text(
                     "yes",
                     //AppLocalizations.of(context)!.yes,

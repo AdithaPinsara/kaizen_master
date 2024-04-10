@@ -12,7 +12,7 @@ class _CommonTextFieldState extends State<CommonTextField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(0.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
           Row(
@@ -38,7 +38,7 @@ class _CommonTextFieldState extends State<CommonTextField> {
             ],
           ),
           Container(
-            height: 165,
+            height: 75,
             child: TextFormField(
               //key: _descriptionFieldKey,
               //controller: _observationFormData.description,
