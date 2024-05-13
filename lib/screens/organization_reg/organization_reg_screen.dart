@@ -9,19 +9,23 @@ class OrganizationRegScreen extends StatefulWidget {
 }
 
 class _OrganizationRegScreenState extends State<OrganizationRegScreen> {
+  final _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            CommonTextField(
-              name: "Name of the organization",
-            ),
-            CommonTextField(
-              name: "Departments",
-            ),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          child: Column(
+            children: [
+              CommonTextField(
+                name: "Name of the organization",
+                controller: _controller,
+              ),
+              CommonTextField(
+                name: "Departments",
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class CommonTextField extends StatefulWidget {
   final String? name;
-  const CommonTextField({Key? key, this.name}) : super(key: key);
+  final TextEditingController? controller;
+  const CommonTextField({Key? key, this.name, this.controller})
+      : super(key: key);
 
   @override
   State<CommonTextField> createState() => _CommonTextFieldState();
@@ -41,7 +43,7 @@ class _CommonTextFieldState extends State<CommonTextField> {
             height: 75,
             child: TextFormField(
               //key: _descriptionFieldKey,
-              //controller: _observationFormData.description,
+              controller: widget.controller,
               maxLength: 500,
               buildCounter: (context,
                   {required currentLength, required isFocused, maxLength}) {

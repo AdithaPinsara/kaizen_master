@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaizen_app/first_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:kaizen_app/screens/organization_reg/organization_reg_screen.dart';
 import 'firebase_options.dart';
 import 'screens/auth/auth_screen.dart';
 import 'screens/incident_reporting/incident_screen.dart';
@@ -50,33 +51,9 @@ class _MainAppState extends State<MainApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            // localizationsDelegates: [
-            //   AppLocalizations.delegate,
-            // ],
-            //       supportedLocales: [
-            //   Locale('en', 'US'), // English (United States)
-            //   Locale('es', 'ES'), // Spanish (Spain)
-            //   Locale('zh', 'CN'), // Chinese (China)
-            //   Locale('vi', 'VN'), // Vietnamese (Vietnam)
-            //   Locale('pt', 'PT'), // Portuguese (Europe)
-            //   Locale('ru', 'RU'), // Russian (Russia)
-            //   Locale('nl', 'NL'), // Dutch (Netherlands)
-            //   Locale('de', 'DE'), // German (Germany)
-            //   Locale('fr', 'FR'), // French (France)
-            // ],
-            // locale: _locale,
-            // localeResolutionCallback:
-            //     (Locale? locale, Iterable<Locale> supportedLocales) {
-            //   //return locale;
-            //   if (supportedLocales.contains(locale)) {
-            //     return locale;
-            //   }
-            //   return const Locale('en', 'US');
-            //   //Fallback to English if the device locale is not supported
-            // },
             home: Scaffold(
               body: Center(
-                child: AuthScreen(),
+                child: OrganizationRegScreen(),
               ),
             ),
           );
@@ -100,38 +77,6 @@ class _MainAppState extends State<MainApp> {
           ),
         );
       },
-      // child: MaterialApp(
-      //   debugShowCheckedModeBanner: false,
-      //   // localizationsDelegates: [
-      //   //   AppLocalizations.delegate,
-      //   // ],
-      //   //       supportedLocales: [
-      //   //   Locale('en', 'US'), // English (United States)
-      //   //   Locale('es', 'ES'), // Spanish (Spain)
-      //   //   Locale('zh', 'CN'), // Chinese (China)
-      //   //   Locale('vi', 'VN'), // Vietnamese (Vietnam)
-      //   //   Locale('pt', 'PT'), // Portuguese (Europe)
-      //   //   Locale('ru', 'RU'), // Russian (Russia)
-      //   //   Locale('nl', 'NL'), // Dutch (Netherlands)
-      //   //   Locale('de', 'DE'), // German (Germany)
-      //   //   Locale('fr', 'FR'), // French (France)
-      //   // ],
-      //   // locale: _locale,
-      //   // localeResolutionCallback:
-      //   //     (Locale? locale, Iterable<Locale> supportedLocales) {
-      //   //   //return locale;
-      //   //   if (supportedLocales.contains(locale)) {
-      //   //     return locale;
-      //   //   }
-      //   //   return const Locale('en', 'US');
-      //   //   //Fallback to English if the device locale is not supported
-      //   // },
-      //   home: Scaffold(
-      //     body: Center(
-      //       child: AuthScreen(),
-      //     ),
-      //   ),
-      // ),
     );
   }
 }
