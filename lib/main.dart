@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kaizen_app/first_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:kaizen_app/screens/organization_reg/organization_reg_screen.dart';
+import 'package:kaizen_app/screens/suggestion_submission/suggestion_screen.dart';
 import 'firebase_options.dart';
 import 'screens/auth/auth_screen.dart';
 import 'screens/incident_reporting/incident_screen.dart';
@@ -53,7 +54,7 @@ class _MainAppState extends State<MainApp> {
             debugShowCheckedModeBanner: false,
             home: Scaffold(
               body: Center(
-                child: OrganizationRegScreen(),
+                child: SuggestionScreen(),
               ),
             ),
           );

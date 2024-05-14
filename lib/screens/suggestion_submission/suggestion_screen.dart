@@ -8,14 +8,14 @@ import '../../common/widgets/more_button.dart';
 import '../../common/widgets/radio_buttons.dart';
 import '../../common/widgets/text_form_field.dart';
 
-class IncidentScreen extends StatefulWidget {
-  const IncidentScreen({super.key});
+class SuggestionScreen extends StatefulWidget {
+  const SuggestionScreen({super.key});
 
   @override
-  State<IncidentScreen> createState() => _IncidentScreenState();
+  State<SuggestionScreen> createState() => _SuggestionScreenState();
 }
 
-class _IncidentScreenState extends State<IncidentScreen> {
+class _SuggestionScreenState extends State<SuggestionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,7 +168,10 @@ class _IncidentScreenState extends State<IncidentScreen> {
                       padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
                       child: Column(
                         children: [
-                          EvidenceSelector(),
+                          //EvidenceSelector(),
+                          CommonTextField(
+                            name: "Title",
+                          ),
                           CommonTextField(
                             name: "Description",
                           ),
@@ -177,47 +180,14 @@ class _IncidentScreenState extends State<IncidentScreen> {
                             items: [],
                           ),
                           DropDownField(
-                            name: "Priority",
-                            items: [],
-                          ),
-                          DropDownField(
-                            name: "Area",
-                            items: [],
-                          ),
-                          DropDownField(
-                            name: "Building",
-                            items: [],
-                          ),
-                          RadioButtons(
-                            name: "Repeated Incident",
-                          ),
-                          RadioButtons(
-                            name: "Anonymous Incident",
-                          ),
-                          CommonTextField(
-                            name: "Additional Information",
-                          ),
-                          DropDownField(
-                            name: "Responsible Department",
-                            items: [],
-                          ),
-                          DropDownField(
-                            name: "Responsible Person",
-                            items: [],
-                          ),
-                          CommonDatePicker(),
-                          DropDownField(
                             name: "Sub Category",
                             items: [],
                           ),
-                          CommonTextField(
-                            name: "Recommended Action",
+                          RadioButtons(
+                            name: "Anonymous Suggestion",
                           ),
                           CommonTextField(
-                            name: "Preventive Action",
-                          ),
-                          CommonTextField(
-                            name: "Comment",
+                            name: "Additional Information",
                           ),
                         ],
                       ),

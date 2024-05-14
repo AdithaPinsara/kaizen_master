@@ -9,6 +9,8 @@ class RadioButtons extends StatefulWidget {
 }
 
 class _RadioButtonsState extends State<RadioButtons> {
+  bool radio = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -42,6 +44,7 @@ class _RadioButtonsState extends State<RadioButtons> {
               ),
               Radio(
                 value: false,
+                visualDensity: VisualDensity.compact,
                 groupValue: false,
                 onChanged: (value) {},
               ),

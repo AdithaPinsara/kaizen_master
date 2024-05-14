@@ -22,7 +22,7 @@ class _EvidenceSelectorState extends State<EvidenceSelector> {
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 4, 8),
                 child: Text(
-                  "Attachments",
+                  "Evidence",
                   //AppLocalizations.of(context)!.attachments,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
